@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {% stylesheets output='css/main.css' filter='cssrewrite' debug=false
+    'bundles/idigitalmain/css/styles.css'
+    'bundles/idigitalmain/stylus/styles.styl' -%}
+        <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body -%}
+        <header></header>
+        {% block content %}{% endblock %}
+        <footer></footer>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts output='js/main.js' debug=false
+    '@iDigitalMainBundle/Resources/public/js/scripts.js' -%}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
