@@ -1,0 +1,5 @@
+i_digital_main:
+    resource: "@iDigitalMainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
